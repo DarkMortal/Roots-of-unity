@@ -1,0 +1,36 @@
+img {
+    border-radius: 5px;
+}
+hr {
+    height: 10px;
+    border: none;
+    background-color: #4c566a;
+    margin: auto;
+    width: 90%;
+}
+.stButton button {
+    width: 100%;
+    background-color: #f84848;
+    color: #eceff4;
+    font-weight: bolder;
+}
+.stButton button:hover {
+    background-color: #d62020;
+    border: none;
+    outline: none;
+}
+.stButton button:hover p {
+    color: #eceff4;
+}
+.stButton button p {
+    font-weight: bolder;
+    color: #eceff4;
+}
+.stButton button:focus p {
+    color: #eceff4;
+}
+[data-testid=stWidgetLabel]
+[data-testid=stMarkdownContainer] p {
+    font-size: 15.5px;
+    width: 100%;
+}
