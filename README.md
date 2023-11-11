@@ -1,4 +1,4 @@
-# Roots if unity
+# Roots of unity
 ## Setting up Virtual Environment in Python
 - Install **virtualenv** if not installed already
 
