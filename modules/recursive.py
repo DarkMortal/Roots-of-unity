@@ -54,9 +54,11 @@ def cosine(x:float) -> float:
         return 2.0 * v * v - 1
 
 @range_check
-def sine(x:float) -> float:
+def rec_sine(x:float) -> float:
     if abs(x) < DELTA:
         return x
     else:
-        v = sine(x / 2.0)
-        return 2.0 * v * root(1 - v * v, 2) * (-1 if x <= full_angle and x >= PI else 1)
+        v = rec_sine(x / 2.0)
+        return 2.0 * v * root(1 - v * v, 2)
+
+sine = lambda x: rec_sine(x) * (-1 if x <= full_angle and x >= PI else 1)
