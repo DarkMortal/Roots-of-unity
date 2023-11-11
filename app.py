@@ -3,6 +3,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 from modules.magic import getRoots, load_css
 
+st.set_page_config(
+    page_title = 'Roots of Unity',
+    layout = 'centered'
+)
+
 load_css()
 st.title("Find i-th roots of r")
 
@@ -22,7 +27,7 @@ if st.button("Generate roots"):
         if i > 1:
             st.latex("\sqrt["+str(i)+"]{"+str(r)+"}\cos\\big(\\frac{"+str(2*l)+"\pi}{"+str(i)+"}\\big)+\sqrt["+str(i)+"]{"+str(r)+"}\sin\\big(\\frac{"+str(2*l)+"\pi}{"+str(i)+"}\\big)j = "+root)
         else:
-            st.latex("\sqrt["+str(i)+"]{"+str(r)+"}\cos("+str(2*l)+"\pi)+\sqrt["+str(i)+"]{"+str(r)+"}\sin("+str(2*l)+"\pi)i = "+root)
+            st.latex("\sqrt["+str(i)+"]{"+str(r)+"}\cos("+str(2*l)+"\pi)+\sqrt["+str(i)+"]{"+str(r)+"}\sin("+str(2*l)+"\pi)j = "+root)
         
     roots = np.array(roots)
     x = roots.real 
